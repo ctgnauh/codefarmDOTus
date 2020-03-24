@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import ExternalLink from './common/ExternalLink';
 
 export const Container = styled.div`
   max-width: 1200px;
@@ -44,4 +45,22 @@ export const Section = styled.section`
         ? props.theme.color.white.dark
         : props.theme.color.primary
     }`};
+`;
+
+export const MozButton = styled(ExternalLink)`
+  color: ${props => props.theme.color.white.regular};
+  text-decoration: none;
+
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  border-radius: 0px;
+  border-width: 2px;
+  border-style: solid;
+  border-color: ${props => props.theme.color.white.regular};
+  background-color: ${props => props.theme.color.black.regular};
+  ${props => props.theme.font_size.small};
+
+  &:hover {
+    color: ${props => props.theme.color.black.regular};
+    background-color: ${props => props.theme.color.white.regular};
+  }
 `;

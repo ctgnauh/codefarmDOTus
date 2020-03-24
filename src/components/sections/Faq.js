@@ -3,62 +3,45 @@ import React from 'react';
 import { Section, Container } from '@components/global';
 
 import FaqItem from '@common/FaqItem';
-import ExternalLink from '@common/ExternalLink';
 
 const FAQS = [
   {
-    title: 'What tech does Gatsby use?',
+    title: 'Codefarm 在各个平台的网店有什么区别？',
     content: () => (
       <>
-        Enjoy the power of the latest web technologies – React.js , Webpack ,
-        modern JavaScript and CSS and more — all set up and waiting for you to
-        start building
+        没有。Codefarm 在各个平台的网店没有任何区别。您在任何一个平台都将享受到同等质量的服务。但是因为各个平台的受众人群有所不同，所以在宣传、支付、交付方式等方面有所差异。请选择自己喜欢的平台，放心下单。
       </>
     ),
   },
   {
-    title: 'Where can you source data from?',
+    title: '在技术顾问服务开始前，我需要做好哪些准备？',
     content: () => (
       <>
-        Gatsby’s rich data plugin ecosystem lets you build sites with the data
-        you want — from one or many sources: Pull data from headless CMSs, SaaS
-        services, APIs, databases, your file system, and more directly into your
-        pages using GraphQL.
+        对于应用软件和操作系统服务，我们建议您在接受服务前，做好备份工作。虽然我们在开始服务时，也会对您的数据进行备份。但是因为对于您的数据不了解，所以我们建议这一步由您亲自完成。对于因我们操作失误而导致的数据丢失，我们只承诺恢复事前备份的部分。除此之外任何的损失，我们都有权拒绝承担责任。
       </>
     ),
   },
   {
-    title: 'How do I scale Gatsby sites?',
+    title: '我能否在 Codefarm 购买数据/爬虫（用于学术研究）？',
     content: () => (
       <>
-        Gatsby.js is Internet Scale. Forget complicated deploys with databases
-        and servers and their expensive, time-consuming setup costs,
-        maintenance, and scaling fears. Gatsby.js builds your site as “static”
-        files which can be deployed easily on dozens of services.
+        不能。销售爬虫、原始数据（Meta data）的行为，违反了中华人民共和国刑法。希望您可以通过正当渠道获取这些信息。
       </>
     ),
   },
   {
-    title: 'How does do I future-proof my website?',
+    title: '我在进行服务时为什么会产生额外开支？是否合理？',
     content: () => (
       <>
-        Do not build a website with last decade’s tech. The future of the web is
-        mobile, JavaScript and APIs—the{` `}
-        <ExternalLink href="https://jamstack.org/">JAMstack</ExternalLink>.
-        Every website is a web app and every web app is a website. Gatsby.js is
-        the universal JavaScript framework you’ve been waiting for.
+        通常我们的程序都需要部署到服务器上，而您需要单独为平台提供服务器的租赁费用。这些费用不会经过 Codefarm 的账户，我们也不会从中赚取差价。如果您无法相信我们，也可以自己提供服务器。但是因您的服务器而导致的程序无法部署、运行，或者出现性能问题。我们都有权拒绝承担责任。
       </>
     ),
   },
   {
-    title: 'What exactly does Gatsby build?',
+    title: '如果我对服务不满意，能否申请退款？',
     content: () => (
       <>
-        Gatsby.js is a static PWA (Progressive Web App) generator. You get code
-        and data splitting out-of-the-box. Gatsby loads only the critical HTML,
-        CSS, data, and JavaScript so your site loads as fast as possible. Once
-        loaded, Gatsby prefetches resources for other pages so clicking around
-        the site feels incredibly fast.
+        可以。通常情况下，Codefarm 为您交付的都是服务（或电子产品）。因为商品的特殊性，我们不会轻易接受全额退款的要求。对于人工服务，如果未能完全满足您的要求，我们会在平台介入的情况下最高接受半价退款。而对于程序的源代码，一经交付拒不接受任何形式的退款申请。所以建议您在下单之前，请先前往客服了解详情。避免出现不必要的损失。
       </>
     ),
   },
@@ -67,7 +50,7 @@ const FAQS = [
 const Faq = () => (
   <Section id="faq">
     <Container>
-      <h1 style={{ marginBottom: 40 }}>Frequently Asked Questions</h1>
+      <h1 style={{ marginBottom: 40 }}>常见问题</h1>
       <div>
         {FAQS.map(({ title, content }) => (
           <FaqItem title={title} key={title}>

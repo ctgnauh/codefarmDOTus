@@ -15,7 +15,28 @@ import {
 
 import { ReactComponent as MenuIcon } from '@static/icons/menu.svg';
 
-const NAV_ITEMS = ['About', 'Brands', 'Team', 'FAQ'];
+const NAV_ITEMS = [
+  {
+    id: 'home',
+    name: '首页',
+  },
+  {
+    id: 'about',
+    name: '关于',
+  },
+  {
+    id: 'product',
+    name: '产品',
+  },
+  {
+    id: 'comments',
+    name: '评价',
+  },
+  {
+    id: 'faq',
+    name: '常见问题',
+  },
+];
 
 class Navbar extends Component {
   state = {
@@ -33,21 +54,21 @@ class Navbar extends Component {
   };
 
   getNavAnchorLink = item => (
-    <AnchorLink href={`#${item.toLowerCase()}`} onClick={this.closeMobileMenu}>
-      {item}
+    <AnchorLink href={`#${item.id}`} onClick={this.closeMobileMenu}>
+      {item.name}
     </AnchorLink>
   );
 
   getNavList = ({ mobile = false }) => (
     <NavListWrapper mobile={mobile}>
       <Scrollspy
-        items={NAV_ITEMS.map(item => item.toLowerCase())}
+        items={NAV_ITEMS.map(item => item.id)}
         currentClassName="active"
         mobile={mobile}
         offset={-64}
       >
         {NAV_ITEMS.map(navItem => (
-          <NavItem key={navItem}>{this.getNavAnchorLink(navItem)}</NavItem>
+          <NavItem key={navItem.id}>{this.getNavAnchorLink(navItem)}</NavItem>
         ))}
       </Scrollspy>
     </NavListWrapper>
@@ -59,7 +80,7 @@ class Navbar extends Component {
     return (
       <Nav {...this.props}>
         <StyledContainer>
-          <Brand>Absurd</Brand>
+          <Brand>Codefarm</Brand>
           <Mobile>
             <button onClick={this.toggleMobileMenu} style={{ color: 'black' }}>
               <MenuIcon />

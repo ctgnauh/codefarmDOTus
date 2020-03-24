@@ -3,8 +3,7 @@ import styled from 'styled-components';
 import { StaticQuery, graphql } from 'gatsby';
 import Img from 'gatsby-image';
 
-import { Container } from '@components/global';
-import ExternalLink from '@common/ExternalLink';
+import { Container, MozButton } from '@components/global';
 
 const Header = () => (
   <StaticQuery
@@ -12,7 +11,7 @@ const Header = () => (
       query {
         art_build: file(
           sourceInstanceName: { eq: "art" }
-          name: { eq: "build" }
+          name: { eq: "laptop" }
         ) {
           childImageSharp {
             fluid(maxWidth: 1400) {
@@ -23,7 +22,7 @@ const Header = () => (
       }
     `}
     render={data => (
-      <HeaderWrapper>
+      <HeaderWrapper id="home">
         <Container>
           <Grid>
             <Art>
@@ -31,17 +30,17 @@ const Header = () => (
             </Art>
             <Text>
               <h1>
-                Fast in
+                您的
                 <br />
-                every way
+                私人技术团队
                 <br />
-                that matters
               </h1>
+              <h2>远程开发、运维、售后</h2>
               <br />
               <p>
-                <StyledExternalLink href="https://github.com/ajayns/gatsby-absurd">
-                  Check out source &nbsp;&#x2794;
-                </StyledExternalLink>
+                <MozButton href="https://market.cloud.tencent.com/stores/1251023608">
+                  点此前往 &nbsp;&#x2794;
+                </MozButton>
               </p>
             </Text>
           </Grid>
@@ -91,19 +90,11 @@ const Grid = styled.div`
 `;
 
 const Text = styled.div`
+  color: #dddddd;
   justify-self: center;
 
   @media (max-width: ${props => props.theme.screen.md}) {
     justify-self: start;
-  }
-`;
-
-const StyledExternalLink = styled(ExternalLink)`
-  color: inherit;
-  text-decoration: none;
-
-  &:hover {
-    color: ${props => props.theme.color.black.regular};
   }
 `;
 

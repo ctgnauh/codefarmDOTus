@@ -1,35 +1,26 @@
-# gatsby-absurd
+# CodefarmDOTus
 
-An absurd Gatsby starter. The collection of illustrations, [absurd.design](https://absurd.design/) by [Diana Valeanu](https://twitter.com/diana_valeanu) is a very fascinating and beautiful project with some pretty thoughtful concepts. Experimentation on how that could be put together on a site ended up as this starter.
+因为缺个首页嘛，所以就糊弄一个： [测试页面](http://codefarm-official.surge.sh/)
 
-[Live Demo](https://gatsby-absurd.netlify.com/)
+## 安装
 
-## Installation
-
-Install the dependencies:
+安装依赖：
 
 ### `yarn install`
 
-Run the development server:
+运行开发服务器：
 
 ### `yarn dev`
 
-Production build to `/public`:
+构建产品到 `/public` 目录：
 
 ### `yarn build`
 
-Cleanup cache (often fixes misc errors when run before `yarn dev`):
+清理缓存（通常用于修复未知错误，需要在 `yarn dev` 前运行）：
 
 ### `yarn clean`
 
-## Content
+## 版权声明
 
-Each of the sections in the site are placed in `src/sections`. Data is usually separated out into objects/arrays to be rendered in the component.
-
-## SEO
-
-The component `src/components/common/SEO.js` handles all meta data and SEO content, modify the `SEO_DATA` variable to add the data automatically. For application manifest data and favicon, modify the `gatsby-plugin-manifest` configuration in `gatsby-config.js`.
-
-## Styling
-
-This project uses [styled-components]() to handle styling: `src/styles/theme.js` defines the styling base and `src/styles/GlobalStyles.js` includes basic element styles along with the CSS Reset.
+本项目使用 [gatsby-absurd](https://github.com/ajayns/gatsby-absurd) 作为模板。
+图片来自于 [Pixabay](https://pixabay.com/)，均不要求署名且可做商业用途[具体详见](https://pixabay.com/zh/service/license/)。
