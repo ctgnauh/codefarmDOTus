@@ -1,0 +1,19 @@
+name: CI
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2   
+      - name: Setup nodejs
+        uses: actions/setup-node@v1
+        with: 
+          node-version: '10.15.1'
+      - run: npm install
+      - run: npm build
