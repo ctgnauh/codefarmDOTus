@@ -18,7 +18,7 @@ jobs:
       - name: Build project
         run: |
           npm install
-          npm build
+          npm run-script build
           zip --junk-paths codefarmDOTus ./public/*
       - name: Create Release
         id: create_release
