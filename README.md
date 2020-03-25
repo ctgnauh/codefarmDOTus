@@ -6,19 +6,19 @@
 
 安装依赖：
 
-### `yarn install`
+### `npm install`
 
 运行开发服务器：
 
-### `yarn dev`
+### `npm dev`
 
 构建产品到 `/public` 目录：
 
-### `yarn build`
+### `npm build`
 
 清理缓存（通常用于修复未知错误，需要在 `yarn dev` 前运行）：
 
-### `yarn clean`
+### `npm clean`
 
 ## 版权声明
 
