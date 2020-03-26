@@ -14,7 +14,7 @@
 
 构建产品到 `/public` 目录：
 
-### `npm build`
+### `npm run-script build`
 
 清理缓存（通常用于修复未知错误，需要在 `npm dev` 前运行）：
 
